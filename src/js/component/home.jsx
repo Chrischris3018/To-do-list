@@ -1,26 +1,41 @@
-import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import React, { useState } from "react";
 
 //create your first component
 const Home = () => {
+	const [listItems, updateListItems] = React.useState([]);
+	const inputReference = React.useRef(null);
+	const addTodoToList = event => {
+		event.preventDefault();
+		console.log(inputReference.current.value);
+		const value = inputReference.current.value;
+		const newArray = listItems.concat([value]);
+		updateListItems(newArray);
+	};
+	//Create or generate a list of todo elements
+	const generateToDoItems = () =>
+		listItems.map((item, index) => <li key={index}> {item}</li>);
+
+	const deleteItem = () => listItems.map;
+
 	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
+		<>
+			<div>todos</div>
+			<form onSubmit={addTodoToList} className="box">
+				<div>
+					<input ref={inputReference} />
+					<button></button>
+				</div>
+				{generateToDoItems()}
+				<div>{listItems.length} items left</div>
+			</form>
+		</>
 	);
 };
 
 export default Home;
+
+// const generateToDoItems2 = () => {
+// 	return listItems.map((item, index) => <li key={index}> {item}</li>);
+// };
+// const generateToDoItems3 = () =>
+// 	listItems.map((item, index) => <li key={index}> {item}</li>);
