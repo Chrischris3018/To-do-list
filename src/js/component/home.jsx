@@ -13,7 +13,19 @@ const Home = () => {
 	};
 	//Create or generate a list of todo elements
 	const generateToDoItems = () =>
-		listItems.map((item, index) => <li key={index}> {item}</li>);
+		listItems.map((item, index) => (
+			<li key={index}>
+				{" "}
+				{item}
+				<button
+					type="button"
+					onClick={() =>
+						updateListItems(listItems.filter(word => word !== item))
+					}>
+					X
+				</button>
+			</li>
+		));
 
 	const deleteItem = () => listItems.map;
 
