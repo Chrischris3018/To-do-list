@@ -10,11 +10,12 @@ const Home = () => {
 		const value = inputReference.current.value;
 		const newArray = listItems.concat([value]);
 		updateListItems(newArray);
+		inputReference.current.value = "";
 	};
 	//Create or generate a list of todo elements
 	const generateToDoItems = () =>
 		listItems.map((item, index) => (
-			<li key={index}>
+			<div key={index}>
 				{" "}
 				{item}
 				<button
@@ -22,20 +23,20 @@ const Home = () => {
 					onClick={() =>
 						updateListItems(listItems.filter(word => word !== item))
 					}>
-					X
+					<i className="fas fa-times"></i>
 				</button>
-			</li>
+			</div>
 		));
-
-	const deleteItem = () => listItems.map;
 
 	return (
 		<>
-			<div>todos</div>
+			<div id="title">todos</div>
 			<form onSubmit={addTodoToList} className="box">
 				<div>
-					<input ref={inputReference} />
-					<button></button>
+					<input
+						ref={inputReference}
+						placeholder="What needs to be done?"
+					/>
 				</div>
 				{generateToDoItems()}
 				<div>{listItems.length} items left</div>
