@@ -17,20 +17,21 @@
     background: #F9F9F9;
 }
 input {
-    width: 500px;
+    width: 1000px;
     border-style: none;
 }
 #title{
-    font-size: 200px;
+    font-size: 250px;
     color: #EBD8D9;
     font-family: none;
 }
 
 #listItem{
     background-color: white;
-    width: 500px;
+    width: 1000px;
     margin: auto;
     text-align: start;
+    border: thin;
 }
 #itemsLeft{
     background-color: white;
