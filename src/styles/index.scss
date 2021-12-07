@@ -18,8 +18,23 @@
 }
 input {
     width: 500px;
-    border: 0px;
+    border-style: none;
 }
 #title{
+    font-size: 200px;
+    color: #EBD8D9;
+    font-family: none;
+}
 
+#listItem{
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    text-align: start;
+}
+#itemsLeft{
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    text-align: start;
 }

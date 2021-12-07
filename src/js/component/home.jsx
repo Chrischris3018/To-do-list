@@ -15,7 +15,7 @@ const Home = () => {
 	//Create or generate a list of todo elements
 	const generateToDoItems = () =>
 		listItems.map((item, index) => (
-			<div key={index}>
+			<div id="listItem" key={index}>
 				{" "}
 				{item}
 				<button
@@ -39,7 +39,7 @@ const Home = () => {
 					/>
 				</div>
 				{generateToDoItems()}
-				<div>{listItems.length} items left</div>
+				<div id="itemsLeft">{listItems.length} items left</div>
 			</form>
 		</>
 	);
