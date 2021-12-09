@@ -6,7 +6,7 @@ const TodoListItem = ({ title, description, id }) => {
 
 	const isHovering = () => setIsHovering(true);
 	const hoverOut = () => setIsHovering(false);
-	const button = (isHovering) ? <button></button> : null;
+	const button = isHovering ? <button></button> : null;
 	return (
 		<li onMouseOver={isHovering} onMouseOut={hoverOut} data-id={id}>
 			{title}

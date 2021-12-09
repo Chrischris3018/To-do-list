@@ -17,8 +17,11 @@
     background: #F9F9F9;
 }
 input {
+    background-color: white;
     width: 1000px;
-    border-style: none;
+    margin: auto;
+    text-align: start;
+    border: thin;
 }
 #title{
     font-size: 250px;
@@ -33,9 +36,22 @@ input {
     text-align: start;
     border: thin;
 }
+button {
+    border: 0px;
+    background-color: white;
+    display: none;
+}
+#listItem:hover .button{
+    display: inline-block;
+}
+
 #itemsLeft{
     background-color: white;
     width: 500px;
     margin: auto;
     text-align: start;
+}
+hr{
+    margin: auto;
+    width: 1000px;
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ShowButtonHover from "./hoverOver";
 
 //create your first component
 const Home = () => {
@@ -16,8 +17,7 @@ const Home = () => {
 	const generateToDoItems = () =>
 		listItems.map((item, index) => (
 			<div id="listItem" key={index}>
-				{" "}
-				{item}
+				<hr></hr> {item}
 				<button
 					type="button"
 					onClick={() =>
@@ -25,12 +25,13 @@ const Home = () => {
 					}>
 					<i className="fas fa-times"></i>
 				</button>
+				<hr></hr>
 			</div>
 		));
 
 	return (
 		<>
-			<div id="title">todos</div>
+			<h1 id="title">todos</h1>
 			<form onSubmit={addTodoToList} className="box">
 				<div>
 					<input
