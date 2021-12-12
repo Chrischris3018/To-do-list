@@ -4,7 +4,7 @@ import "../../styles/index.scss";
 const TodoListItem = ({ title, description, id }) => {
 	const [isHovering, setIsHovering] = useState(false);
 
-	const isHovering = () => setIsHovering(true);
+	const hoverIn = () => setIsHovering(true);
 	const hoverOut = () => setIsHovering(false);
 	const button = isHovering ? <button></button> : null;
 	return (
