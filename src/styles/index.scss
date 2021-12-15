@@ -40,10 +40,10 @@ input {
 button {
     border: 0px;
     background-color: white;
-    display: none;
+    visibility: hidden;
 }
-#listItem:hover .button{
-    display: inline-block;
+#listItem:hover button{
+    visibility: visible;
 }
 
 #itemsLeft{
