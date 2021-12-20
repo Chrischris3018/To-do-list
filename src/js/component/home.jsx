@@ -16,7 +16,7 @@ const Home = () => {
 	const generateToDoItems = () =>
 		listItems.map((item, index) => (
 			<div id="listItem" key={index}>
-				<hr></hr> {item}
+				{item}
 				<button
 					type="button"
 					onClick={() =>
@@ -24,7 +24,6 @@ const Home = () => {
 					}>
 					<i className="fas fa-times"></i>
 				</button>
-				<hr></hr>
 			</div>
 		));
 

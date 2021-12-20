@@ -21,7 +21,12 @@ input {
     width: 1000px;
     margin: auto;
     text-align: start;
-    border: thin;
+    border: 1px solid grey;
+    font-size: 200%;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
 }
 #title{
     font-size: 250px;
@@ -36,11 +41,17 @@ input {
     margin: auto;
     text-align: start;
     border: thin;
+    font-size: 200%;
+    padding-left: 50px;
+    height: 100px;
+    border: 1px solid grey;
 }
 button {
     border: 0px;
     background-color: white;
     visibility: hidden;
+    float: right;
+    padding-right: 50px;
 }
 #listItem:hover button{
     visibility: visible;
@@ -48,9 +59,12 @@ button {
 
 #itemsLeft{
     background-color: white;
-    width: 500px;
+    width: 1000px;
     margin: auto;
     text-align: start;
+    font-size: 200%;
+    border: 1px solid grey;
+    padding-left: 50px;
 }
 hr{
     margin: auto;
